@@ -12,6 +12,19 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+    new Array(n).fill('0').map( (num, i) => {
+        const count = i + 1;
+        if (count % 3 === 0 && count % 5 === 0){
+            console.log('fizzbuzz');
+        } else if (count % 5 === 0){
+            console.log('buzz');
+        } else if (count % 3 === 0) {
+            console.log('fizz');
+        } else {
+            console.log(count);
+        }
+    })
+}
 
 module.exports = fizzBuzz;
