@@ -17,6 +17,19 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+    new Array(n).fill('0').map((step, i) => {
+        const count = i + 1;
+        let curStep = '';
+        for(let j = 1; j <= n; j++){
+            if (j <= count){
+                curStep += '#';
+            } else {
+                curStep += ' ';
+            }
+        }
+        console.log(curStep); 
+    })
+}
 
 module.exports = steps;
