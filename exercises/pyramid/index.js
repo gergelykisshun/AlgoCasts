@@ -14,6 +14,24 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+// width 2n - 1
+
+function pyramid(n) {
+  new Array(n).fill('0').map((item, index) => {
+    let level = '';
+    const row = index + 1;
+    const notPoundStart = n - row;
+    const notPoundEnd = (2 * n - 1) - (n - row);
+
+    for (let column = 1; column <= (2 * n - 1); column++ ){
+      if (column <= notPoundStart  || column > notPoundEnd ){
+        level += ' ';
+      } else {
+        level += '#';
+      }
+    }
+    console.log(level);
+  });
+}
 
 module.exports = pyramid;
